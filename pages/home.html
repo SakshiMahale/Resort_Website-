@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HOME PAGE</title>
+      
+        <!-------FAVIICON--------->
+        <link rel="icon" type="image/png" href="../assets/favicon-16x16.png">
+        <!-------BOOTSTRAP----------->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!------FONT AWESOME----->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-------------CSS FILE------------>
+        <link rel="stylesheet" href="../css/style.css" />
+      </head>
+<body>
+    <!---------NAVBAR------------>
+  <header class="header_wrapper">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/v2resort2.jpg" width="60px" height="60px" class="img-fluid " alt="logo">
+          <b>MagicMotel</b>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <i class="fa-solid navbar-toggler-icon"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+          <ul class="navbar-nav menu-navbar-nav  ">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../pages/home.html">Home  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/About_us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Book_now.html">Book Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item mt-3 mt-lg-0">
+              <a class="main-btn" href="../pages/Sign-up.html" style="text-decoration: none;">Sign Up/Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+<header>
+    <div id="includedContent"></div>
+<!--------Banner Section------------------>
+<div class="slideshow">
+  <img class="mySlides" src="../assets/resort2.jpg">
+  <img class="mySlides" src="../assets/resort3.jpeg">
+  <img class="mySlides" src="../assets/resort4.jpg">
+  <div class="text-block">
+                <h1>Meet Luxury itself!</h1>
+                <h3><p>Best vacation for you and your loved ones.</p></h3>
+
+  </div>
+</div>
+<div class="container booking-area">
+  <form class="row">
+    <div class="col-lg mb-3 mb-lg-0">
+        <input type="text" placeholder="FROM" class="form-control" onfocus="(this.type='date')">
+     </div>  
+     <div class="col-lg mb-3 mb-lg-0">
+      <input type="text" placeholder="TO" class="form-control" onfocus="(this.type='date')">
+   </div>  
+   <div class="col-lg mb-3 mb-lg-0"> 
+        <select class="form-select">
+        <option selected>Adults</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        </select>
+    </div>
+     
+    <div class="col-lg mb-3 mb-lg-0">
+      <select class="form-select">
+      <option selected>Children</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      </select>
+    </div>
+    <div class="col-lg mb-3 mb-lg-0">
+        <button type="submit" class="main-btn rounded-2 px-lg-3">Check Availability
+        </button>   
+        </div>
+  </form>
+</div>
+
+<!---------BOOTSTRAP CDB LINKS---------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<script>
+
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) { myIndex = 1 }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 1500); // Change image every 2 seconds
+  }
+</script>
+</body>
+</html>
